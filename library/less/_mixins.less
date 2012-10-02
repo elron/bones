@@ -201,7 +201,14 @@ BOX SHADOW
 .boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) {
 	-webkit-box-shadow: @x @y @radius @spread @color;
 	   -moz-box-shadow: @x @y @radius @spread @color;
-					box-shadow: @x @y @radius @spread @color; 
+		box-shadow: @x @y @radius @spread @color; 
+}
+
+/* .noBoxShadow(); */
+.noBoxShadow() {
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		box-shadow: none; 
 }
 
 /*********************
