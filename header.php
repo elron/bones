@@ -18,6 +18,14 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		
+		<?php 
+		/* If theres a Like or +1 share buttons, They will take the post thumbnail as their share image */
+		$post_id = get_the_ID();
+		$thumbnail_id = get_post_thumbnail_id( $post_id );
+		$thumbnail_url = wp_get_attachment_url( $thumbnail_id );
+		if ( !empty($thumbnail_url) ) echo '<link rel="image_src" href="'. $thumbnail_url .'" />';
+		?>
+		
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 				
