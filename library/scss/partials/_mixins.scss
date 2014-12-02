@@ -70,4 +70,13 @@ probably best not to use it. I mean, were you going to anyway? */
 	box-sizing:         $type;
 }
 
+/*********************
+ROUNDED CORNERS
+*********************/
 
+/* @include rounded-corners(0.75em); */
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
