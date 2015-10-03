@@ -28,7 +28,7 @@ over your project's layout.
 @mixin grid-col {
   float: left;
   padding-right: 0.75em;
-
+//  padding-left: initial; // For RTL support
 }
 
 // the last column
