@@ -41,6 +41,9 @@ the whole project.
 // the grid
 @import "partials/grid";
 
+// Add right-to-left grid support (for languages such as Hebrew)
+// @import "partials/grid-rtl";
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
