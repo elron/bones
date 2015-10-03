@@ -1,0 +1,88 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet (Right-to-left extension)
+
+This file is based on _grid.scss. you should include it before adding this file.
+Just make sure that...
+(1) you have @import "partials/grid-rtl"; enabled in style.scss
+(2) @mixin grid-col {padding-left: initial;} added in _grid.scss
+
+******************************************************************/
+
+// using a mixin since we can't use placeholder selectors
+@mixin grid-col {
+  float: right;
+  padding-right: initial;
+  padding-left: 0.75em;
+
+}
+
+// the last column
+.last-col {
+  float: left;
+  padding-right: initial;
+  padding-left: 0 !important;
+}
+
+
+/*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+@media (max-width: 767px) {
+
+  .m-all {
+    padding-right: initial;
+    padding-left: 0;
+  }
+
+  .m-1of2, .m-1of3, .m-2of3, .m-1of4, .m-3of4 {
+    @include grid-col;
+  }
+  
+} // end mobile styles
+
+
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 1029px) {
+
+  .t-all {
+    padding-right: initial;
+    padding-left: 0;
+  }
+  .t-1of2,
+  .t-1of3, .t-2of3,
+  .t-1of4, .t-3of4, 
+  .t-1of5, .t-2of5, .t-3of5, .t-4of5 {
+    @include grid-col;
+  }
+
+} // end tablet
+
+/* Landscape to small desktop */
+@media (min-width: 1030px) {
+
+  .d-all  {
+    padding-right: initial;
+    padding-left: 0;
+  }
+  .d-1of2, .d-1of3,
+  .d-2of3, 
+  .d-1of4, .d-3of4, 
+  .d-1of5, .d-2of5, .d-3of5, .d-4of5, 
+  .d-1of6, 
+  .d-1of7, .d-2of7, .d-3of7, .d-4of7, .d-5of7, .d-6of7, 
+  .d-1of8, 
+  .d-1of9, 
+  .d-1of10, 
+  .d-1of11, 
+  .d-1of12 {
+    @include grid-col;
+  }
+
+
+} // end desktop styles
