@@ -20,6 +20,15 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 INPUTS
 *********************/
 
+// RTL sites show those in the wrong direction, so here's a fix:
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime"],
+input[type="time"] {
+    direction: ltr;
+}
+
 // setting up defaults
 input[type="text"],
 input[type="password"],
